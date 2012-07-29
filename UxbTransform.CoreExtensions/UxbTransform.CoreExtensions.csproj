@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21B89438-0350-4D54-95DF-91D1289FF5C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UxbTransform.CoreExtensions</RootNamespace>
+    <AssemblyName>UxbTransform.CoreExtensions</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\Extensions\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\Any\Extensions\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\Debug\x86\Extensions\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\bin\Release\x86\Extensions\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MouseKeyboardLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MouseKeyboardLibrary\MouseKeyboardLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition, Version=2009.22.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MEF\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="CommandSets\BrowserCommandSet.cs" />
+    <Compile Include="CommandSets\GenericCommandSet.cs" />
+    <Compile Include="CommandSets\MediaCommandSet.cs" />
+    <Compile Include="Commands\KeyMapCommand.cs" />
+    <Compile Include="Commands\KeyPressCommand.cs" />
+    <Compile Include="Commands\MouseClickCommand.cs" />
+    <Compile Include="Commands\MouseControlCommand.cs" />
+    <Compile Include="Commands\MouseMoveCommand.cs" />
+    <Compile Include="Commands\SwitchCommand.cs" />
+    <Compile Include="ComponentStates\AccelerometerDeviceComponentState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentStates\AccelerometerDeviceComponentState.Designer.cs">
+      <DependentUpon>AccelerometerDeviceComponentState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentStates\ButtonDeviceComponentState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentStates\ButtonDeviceComponentState.Designer.cs">
+      <DependentUpon>ButtonDeviceComponentState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentStates\DeltaDeviceComponentState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentStates\DeltaDeviceComponentState.Designer.cs">
+      <DependentUpon>DeltaDeviceComponentState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentStates\JoystickDeviceComponentState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentStates\JoystickDeviceComponentState.Designer.cs">
+      <DependentUpon>JoystickDeviceComponentState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentStates\PositionalDeviceComponentState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentStates\PositionalDeviceComponentState.Designer.cs">
+      <DependentUpon>PositionalDeviceComponentState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentStates\TriggerDeviceComponentState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentStates\TriggerDeviceComponentState.Designer.cs">
+      <DependentUpon>TriggerDeviceComponentState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceComponents\AccelerometerDeviceComponent.cs" />
+    <Compile Include="DeviceComponents\ButtonDeviceComponent.cs" />
+    <Compile Include="DeviceComponents\ButtonState.cs" />
+    <Compile Include="DeviceComponents\DeltaDeviceComponent.cs" />
+    <Compile Include="DeviceComponents\JoystickDeviceComponent.cs" />
+    <Compile Include="DeviceComponents\PositionalDeviceComponent.cs" />
+    <Compile Include="DeviceComponents\TriggerDeviceComponent.cs" />
+    <Compile Include="Devices\MouseDevice.cs" />
+    <Compile Include="Gestures\ButtonDoublePressGesture.cs" />
+    <Compile Include="Gestures\ButtonDownGesture.cs" />
+    <Compile Include="Gestures\ButtonPressAndHoldGesture.cs" />
+    <Compile Include="Gestures\ButtonPressGesture.cs" />
+    <Compile Include="Gestures\ButtonTrackGesture.cs" />
+    <Compile Include="Gestures\DeltaGesture.cs" />
+    <Compile Include="Gestures\FlickGesture.cs" />
+    <Compile Include="Gestures\JoystickPositionGesture.cs" />
+    <Compile Include="Gestures\PositionChangeGesture.cs" />
+    <Compile Include="Gestures\TriggerDownGesture.cs" />
+    <Compile Include="Modifiers\ButtonDownModifier.cs" />
+    <Compile Include="Modifiers\DelayedButtonDownModifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyConverters\DirectionConverter.cs" />
+    <Compile Include="PropertyConverters\KeyboardKeyConverter.cs" />
+    <Compile Include="PropertyConverters\MouseButtonConverter.cs" />
+    <Compile Include="PropertySetters\ButtonDeviceComponentSetter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertySetters\ButtonDeviceComponentSetter.Designer.cs">
+      <DependentUpon>ButtonDeviceComponentSetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertySetters\DeltaDeviceComponentSetter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertySetters\DeltaDeviceComponentSetter.Designer.cs">
+      <DependentUpon>DeltaDeviceComponentSetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertySetters\DeviceComponentSetter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertySetters\DeviceComponentSetter.Designer.cs">
+      <DependentUpon>DeviceComponentSetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertySetters\DirectionSetter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertySetters\DirectionSetter.Designer.cs">
+      <DependentUpon>DirectionSetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertySetters\Int32Setter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertySetters\Int32Setter.Designer.cs">
+      <DependentUpon>Int32Setter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertySetters\JoystickDeviceComponentSetter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertySetters\JoystickDeviceComponentSetter.Designer.cs">
+      <DependentUpon>JoystickDeviceComponentSetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertySetters\KeyboardKeySetter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertySetters\KeyboardKeySetter.Designer.cs">
+      <DependentUpon>KeyboardKeySetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertySetters\PositionalDeviceComponentSetter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertySetters\PositionalDeviceComponentSetter.Designer.cs">
+      <DependentUpon>PositionalDeviceComponentSetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertySetters\TriggerDeviceComponentSetter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertySetters\TriggerDeviceComponentSetter.Designer.cs">
+      <DependentUpon>TriggerDeviceComponentSetter.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UxbTransform\UxbTransform.Core.csproj">
+      <Project>{577EAD3D-3650-46CB-B6BA-4EAE2A6CC77A}</Project>
+      <Name>UxbTransform.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComponentStates\AccelerometerDeviceComponentState.resx">
+      <DependentUpon>AccelerometerDeviceComponentState.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentStates\ButtonDeviceComponentState.resx">
+      <DependentUpon>ButtonDeviceComponentState.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentStates\DeltaDeviceComponentState.resx">
+      <DependentUpon>DeltaDeviceComponentState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentStates\JoystickDeviceComponentState.resx">
+      <DependentUpon>JoystickDeviceComponentState.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentStates\PositionalDeviceComponentState.resx">
+      <DependentUpon>PositionalDeviceComponentState.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentStates\TriggerDeviceComponentState.resx">
+      <DependentUpon>TriggerDeviceComponentState.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertySetters\ButtonDeviceComponentSetter.resx">
+      <DependentUpon>ButtonDeviceComponentSetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertySetters\DeltaDeviceComponentSetter.resx">
+      <DependentUpon>DeltaDeviceComponentSetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertySetters\DeviceComponentSetter.resx">
+      <DependentUpon>DeviceComponentSetter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertySetters\DirectionSetter.resx">
+      <DependentUpon>DirectionSetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertySetters\Int32Setter.resx">
+      <DependentUpon>Int32Setter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertySetters\KeyboardKeySetter.resx">
+      <DependentUpon>KeyboardKeySetter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertySetters\PositionalDeviceComponentSetter.resx">
+      <DependentUpon>PositionalDeviceComponentSetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertySetters\TriggerDeviceComponentSetter.resx">
+      <DependentUpon>TriggerDeviceComponentSetter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

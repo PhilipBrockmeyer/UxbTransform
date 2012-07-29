@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <Devices>
+    <Device name="Mouse" type="MouseDevice" index="0" />
+    <Device name="Wiimote1" type="WiimoteDevice" index="0" />
+  </Devices>
+
+  <Applications>
+    <Application processName="ALL" name="Default">
+      <GestureMappings />
+    </Application>
+
+    <Application name="Firefox" processName="firefox">
+      <GestureMappings>
+        <Mapping>
+          <Gesture type="FlickGesture">
+            <Properties>
+              <Set property="Button" value="{DeviceBinding Path=Right, Name=Mouse}" />
+              <Set property="Cursor" value="{DeviceBinding Path=Cursor, Name=Mouse}" />
+              <Set property="FlickDirection" value="Left" />
+            </Properties>
+            <Modifiers />
+          </Gesture>
+          <Command name="BackCommand" commandSet="BrowserCommandSet">
+            <Properties />
+          </Command>
+        </Mapping>
+        <Mapping>
+          <Gesture type="FlickGesture">
+            <Properties>
+              <Set property="Button" value="{DeviceBinding Path=Right, Name=Mouse}" />
+              <Set property="Cursor" value="{DeviceBinding Path=Cursor, Name=Mouse}" />
+              <Set property="FlickDirection" value="Right" />
+            </Properties>
+            <Modifiers />
+          </Gesture>
+          <Command name="ForwardCommand" commandSet="BrowserCommandSet">
+            <Properties />
+          </Command>
+        </Mapping>
+        <Mapping>
+          <Gesture type="DeltaGesture">
+            <Properties>
+              <Set property="Component" value="{DeviceBinding Path=Wheel, Name=Mouse}" />
+            </Properties>
+            <Modifiers>
+              <Modifier type="ButtonDownModifier" behavior="Required">
+                <Properties>
+                  <Set property="Button" value="{DeviceBinding Path=Right, Name=Mouse}" />
+                </Properties>
+              </Modifier>
+            </Modifiers>
+          </Gesture>
+          <Command name="SwitchTabCommand" commandSet="BrowserCommandSet">
+            <Properties />
+          </Command>
+        </Mapping>
+      </GestureMappings>
+    </Application>
+    
+    <Application name="Internet Explorer" processName="iexplore">
+      <GestureMappings>
+        <Mapping>
+          <Gesture type="FlickGesture">
+            <Properties>
+              <Set property="Button" value="{DeviceBinding Path=Right, Name=Mouse}" />
+              <Set property="Cursor" value="{DeviceBinding Path=Cursor, Name=Mouse}" />
+              <Set property="FlickDirection" value="Left" />
+            </Properties>
+            <Modifiers />
+          </Gesture>
+          <Command name="BackCommand" commandSet="BrowserCommandSet">
+            <Properties />
+          </Command>
+        </Mapping>
+        <Mapping>
+          <Gesture type="FlickGesture">
+            <Properties>
+              <Set property="Button" value="{DeviceBinding Path=Right, Name=Mouse}" />
+              <Set property="Cursor" value="{DeviceBinding Path=Cursor, Name=Mouse}" />
+              <Set property="FlickDirection" value="Right" />
+            </Properties>
+            <Modifiers />
+          </Gesture>
+          <Command name="ForwardCommand" commandSet="BrowserCommandSet">
+            <Properties />
+          </Command>
+        </Mapping>
+        <Mapping>
+          <Gesture type="DeltaGesture">
+            <Properties>
+              <Set property="Component" value="{DeviceBinding Path=Wheel, Name=Mouse}" />
+            </Properties>
+            <Modifiers>
+              <Modifier type="ButtonDownModifier" behavior="Required">
+                <Properties>
+                  <Set property="Button" value="{DeviceBinding Path=Right, Name=Mouse}" />
+                </Properties>
+              </Modifier>
+            </Modifiers>
+          </Gesture>
+          <Command name="SwitchTabCommand" commandSet="BrowserCommandSet">
+            <Properties />
+          </Command>
+        </Mapping>
+      </GestureMappings>
+    </Application>
+  </Applications>
+</Configuration>

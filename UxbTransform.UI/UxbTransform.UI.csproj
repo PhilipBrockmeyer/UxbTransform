@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD33D414-BC9A-4093-9336-4A69B20CDBC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UxbTransform.UI</RootNamespace>
+    <AssemblyName>UxbTransform</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>UxbTransform.UI.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\Any\Extensions\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\Debug\x86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\bin\Release\x86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition, Version=2009.22.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MEF\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationManager.Designer.cs">
+      <DependentUpon>ApplicationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationMapping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationMapping.Designer.cs">
+      <DependentUpon>ApplicationMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommandDetails.Designer.cs">
+      <DependentUpon>CommandDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeviceInformation.Designer.cs">
+      <DependentUpon>DeviceInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeviceManagement.Designer.cs">
+      <DependentUpon>DeviceManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditApplication.Designer.cs">
+      <DependentUpon>EditApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenericDeviceState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GenericDeviceState.Designer.cs">
+      <DependentUpon>GenericDeviceState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IActivatable.cs" />
+    <Compile Include="InputDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InputDetails.Designer.cs">
+      <DependentUpon>InputDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogUI.Designer.cs">
+      <DependentUpon>LogUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModifierDetails.Designer.cs">
+      <DependentUpon>ModifierDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewApplication.Designer.cs">
+      <DependentUpon>NewApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewDevice.Designer.cs">
+      <DependentUpon>NewDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ApplicationManager.resx">
+      <DependentUpon>ApplicationManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationMapping.resx">
+      <DependentUpon>ApplicationMapping.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandDetails.resx">
+      <DependentUpon>CommandDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceInformation.resx">
+      <DependentUpon>DeviceInformation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceManagement.resx">
+      <DependentUpon>DeviceManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditApplication.resx">
+      <DependentUpon>EditApplication.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenericDeviceState.resx">
+      <DependentUpon>GenericDeviceState.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputDetails.resx">
+      <DependentUpon>InputDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogUI.resx">
+      <DependentUpon>LogUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierDetails.resx">
+      <DependentUpon>ModifierDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewApplication.resx">
+      <DependentUpon>NewApplication.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewDevice.resx">
+      <DependentUpon>NewDevice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shell.resx">
+      <DependentUpon>Shell.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XmlUI.resx">
+      <DependentUpon>XmlUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Shell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shell.Designer.cs">
+      <DependentUpon>Shell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XmlUI.Designer.cs">
+      <DependentUpon>XmlUI.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UxbTransform\UxbTransform.Core.csproj">
+      <Project>{577EAD3D-3650-46CB-B6BA-4EAE2A6CC77A}</Project>
+      <Name>UxbTransform.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Extensions\Extensions.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
